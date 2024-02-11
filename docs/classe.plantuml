@@ -1,0 +1,39 @@
+@startuml NomeDoProjeto 
+
+note as primeiraNota
+        Teste UML 
+end note
+
+
+class Aluno {
+	+String Nome
+	+String Endereco 
+	+Integer Matricula 
+
+	+Integer obterMatricula() 
+
+}
+
+
+class Turma {
+    +String Codigo 
+    +String Sala 
+    +String Horario
+    +String NomeDisciplina 
+    +String RegistroProfessor 
+    +List Alunos
+    +List exibirAlunos()
+    +Dict exibirDadosTurma()
+}
+
+class Professor {
+    +String Nome
+    +String Titulo 
+    +String Registro 
+    
+}
+
+Aluno --> Turma : pertence à
+Professor --> Turma : ensina à 
+
+@enduml
