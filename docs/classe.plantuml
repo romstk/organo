@@ -1,7 +1,7 @@
 @startuml NomeDoProjeto 
 
 note as primeiraNota
-        Teste UML 
+        Diagrama de classes do projeto Organo desenvolvido com React
 end note
 
 
