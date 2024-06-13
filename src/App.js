@@ -40,7 +40,7 @@ function App() {
       corSecundaria: '#FFF5D9' 
     },
     {
-      nome: ' Inovação e Gestão',
+      nome: 'Inovação e Gestão',
       corPrimaria: '#FF8A29',
       corSecundaria: '#FFEEDF' 
     }, 
@@ -52,7 +52,8 @@ function App() {
 
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-  console.log(colaborador)
+    
+    debugger
   /*Aqui neste ponto atualizado o array colaboradores utilizado para guardar o state.
     vamos colocar no array os colaboradores antigos usando a sintaxe  
     [...colaboradores, 

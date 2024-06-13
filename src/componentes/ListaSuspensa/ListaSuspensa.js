@@ -8,7 +8,10 @@ const ListaSupensa = (props)=> {
             <select
                 
                 onChange={evento => props.aoAlterado(evento.target.value)} 
-                required={props.obrigatorio}>
+                required={props.obrigatorio}
+                value={props.valor}
+                
+                >
                 <option value="" />
 
                 {props.itens.map(item => {
