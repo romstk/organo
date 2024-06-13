@@ -8,20 +8,11 @@ import Botao from '../Botao/Botao'
 
 const Formulario = (props) => {
 
-    const times = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'Devops',
-        'UX e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
 
 
 /*
-Neste ponto vamos controlar o estado do componete através de useState
-O React através da atribuição na const array abaixo irá armazenar em valor o dado passadp através da função setValor
+Neste ponto vamos controlar o estado do componente através de useState
+O React através da atribuição na const array abaixo irá armazenar em valor o dado passado através da função setValor
 */
    
 const [nome, setNome] = useState('')
@@ -31,7 +22,7 @@ const [time, setTime] = useState('')
 
 
 
-
+//Esta constante aoSalvar recebe os dados dos campos do
 const aoSalvar = (evento) => {
     evento.preventDefault();
     props.aoColaboradorCadastrado({
@@ -40,6 +31,11 @@ const aoSalvar = (evento) => {
         imagem,
         time
     })
+    setNome('')
+    setCargo('')
+    setImagem('')
+    setTime('')
+
 }
 
     return (
@@ -70,7 +66,7 @@ const aoSalvar = (evento) => {
                 <ListaSupensa 
                     obrigatorio={true}
                     label='Time' 
-                    itens = {times}
+                    itens = {props.times}
                     valor={time}
                     aoAlterado={valor => setTime(valor)}
 
