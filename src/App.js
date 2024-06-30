@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Formulario from './componentes/Formulario/Formulario'
 import Banner from './componentes/Banner/Banner'
 import Time from './componentes/Time/Time'
+import Rodape from './componentes/Rodape/Rodape'
 
 
 
@@ -82,6 +83,8 @@ function App() {
         colaboradores={colaboradores.filter(colab => colab.time === time.nome)} 
         
         />)}
+     <Rodape desenvolvedor={'Desenvolvido por Alura'}/>
+
     </div>
   );
 }
