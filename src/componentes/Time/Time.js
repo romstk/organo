@@ -1,15 +1,25 @@
 import Colaborador from '../Colaborador/Colaborador'
 import './Time.css'
 
-const Time = (props) => {
+const Time = ({time, colaboradoresTime, aoDeletar}) => {
     return (
             
-        props.colaboradores.length > 0 && <section className='time' style={ {backgroundColor:props.corSecundaria} }>
-            <h3 style={ {borderColor:props.corPrimaria} }>{props.nome}</h3>
+            //O Time é retornado e neste primeiro ponto o cabeçlho do card é criado com o nome do time e a cor primária.
+            colaboradoresTime.length > 0 && <section className='time' style={{ backgroundImage: 'url(/imagens/fundo.png)', backgroundColor: time.corPrimaria }}>
+            <h3 style={ {borderColor:time.corPrimaria} }>{time.nome}</h3>
+            {/*Aqui mapeando os times crio cada colaborador propriamente dito retornando um map com cada um deles e suas propriedades*/}
             <div className='colaboradores'>
-                {props.colaboradores.map( colaborador => <Colaborador 
-                corDeFundo = {props.corPrimaria}
-                key={colaborador.nome} nome ={colaborador.nome} cargo={colaborador.cargo} imagem={colaborador.imagem}/>)}
+                {colaboradoresTime.map((colaborador, indice) => 
+                    {
+                        return <Colaborador 
+                            corDeFundo = {colaborador.corPrimaria}
+                            key={indice} 
+                            nome ={colaborador.nome} 
+                            cargo={colaborador.cargo} 
+                            imagem={colaborador.imagem}
+                            aoDeletar={aoDeletar}/>
+                    }
+                )}
             </div>
             
         </section>

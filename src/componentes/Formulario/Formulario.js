@@ -7,9 +7,6 @@ import Botao from '../Botao/Botao'
 
 
 const Formulario = (props) => {
-
-
-
 /*
 Neste ponto vamos controlar o estado do componente através de useState
 O React através da atribuição na const array abaixo irá armazenar em valor o dado passado através da função setValor
@@ -22,10 +19,15 @@ const [time, setTime] = useState('')
 
 
 
-//Esta constante aoSalvar recebe os dados dos campos do
+//Esta constante aoSalvar recebe os dados dos campos do formulário
+// e chama a função aoCadastrar que foi passada como props para o componente Formulário
+// O evento.preventDefault() é utilizado para evitar que o formulário seja enviado e a página seja recarregada
+// O evento é passado como parametro para a função aoSalvar
+// O objeto colaborador é criado dentro do componente Formulario, na função aoSalvar:
 const aoSalvar = (evento) => {
     evento.preventDefault();
-    props.aoColaboradorCadastrado({
+    //Na função aoSalvar, você está criando um objeto JavaScript com as propriedades nome, cargo, imagem e time:
+    props.aoCadastrar({
         nome, 
         cargo, 
         imagem,
