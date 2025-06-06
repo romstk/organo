@@ -6,6 +6,10 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+<<<<<<< HEAD
+=======
+    "hex-to-rgba": "^2.0.1",
+>>>>>>> 2487590 (Curso Alura - React - Como os componentes funcionam. Aula 3. Como o react vê um componente. Criamos um input de cor para mudar a cor do Colaborador e do Time. Trabalhamos com o state para os Times, usamos as cores e o pacote Hex-to-RGBA para trabalhar com opacidade de cores e diferenciar a cor do time e colaborador.)
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",

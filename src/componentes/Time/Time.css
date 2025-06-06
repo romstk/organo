@@ -1,6 +1,10 @@
 .time {
     text-align: center;
     padding: 32px;
+<<<<<<< HEAD
+=======
+    position: relative;
+>>>>>>> 2487590 (Curso Alura - React - Como os componentes funcionam. Aula 3. Como o react vê um componente. Criamos um input de cor para mudar a cor do Colaborador e do Time. Trabalhamos com o state para os Times, usamos as cores e o pacote Hex-to-RGBA para trabalhar com opacidade de cores e diferenciar a cor do time e colaborador.)
     
 }
 
@@ -17,4 +21,13 @@
     margin-top: 32px;
     flex-wrap: wrap;
 
+<<<<<<< HEAD
+=======
+}
+
+.input-cor {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+>>>>>>> 2487590 (Curso Alura - React - Como os componentes funcionam. Aula 3. Como o react vê um componente. Criamos um input de cor para mudar a cor do Colaborador e do Time. Trabalhamos com o state para os Times, usamos as cores e o pacote Hex-to-RGBA para trabalhar com opacidade de cores e diferenciar a cor do time e colaborador.)
 }
