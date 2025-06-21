@@ -6,7 +6,7 @@ import Botao from '../Botao/Botao'
 
 
 
-const Formulario = (props) => {
+const Formulario = ({aoCadastrar, times, cadastrarTime}) => {
 /*
 Neste ponto vamos controlar o estado do componente através de useState
 O React através da atribuição na const array abaixo irá armazenar em valor o dado passado através da função setValor
@@ -16,6 +16,8 @@ const [nome, setNome] = useState('')
 const [cargo, setCargo] = useState('')
 const [imagem, setImagem] = useState('')
 const [time, setTime] = useState('')
+const [nomeTime, setNomeTime] = useState('')
+const [corTime, setCorTime] = useState('')
 
 
 
@@ -27,7 +29,7 @@ const [time, setTime] = useState('')
 const aoSalvar = (evento) => {
     evento.preventDefault();
     //Na função aoSalvar, você está criando um objeto JavaScript com as propriedades nome, cargo, imagem e time:
-    props.aoCadastrar({
+    aoCadastrar({
         nome, 
         cargo, 
         imagem,
@@ -68,13 +70,44 @@ const aoSalvar = (evento) => {
                 <ListaSupensa 
                     obrigatorio={true}
                     label='Time' 
-                    itens = {props.times}
+                    itens = {times}
                     valor={time}
                     aoAlterado={valor => setTime(valor)}
 
                 />
                 <Botao>
                     Criar card
+                </Botao>
+            </form>
+            <form onSubmit={ (evento) => {
+                evento.preventDefault();
+                cadastrarTime({
+                    nome: nomeTime,
+                    cor: corTime
+                })
+
+
+            }
+            }>
+                <h2>Preencha os dados para criar um novo time.</h2>
+                <CampoTexto 
+                    obrigatorio
+                    label='Nome' 
+                    placeholder='Digite o nome do time' 
+                    valor={nomeTime}
+                    aoAlterado={valor => setNomeTime(valor)}
+                />
+                <CampoTexto 
+                    obrigatorio={true}  
+                    label='Cor' 
+                    placeholder='Digite a cor do time.' 
+                    valor={corTime}
+                    aoAlterado={valor => setCorTime(valor)}
+                />
+
+                
+                <Botao>
+                    Criar Time
                 </Botao>
             </form>
         </section>
